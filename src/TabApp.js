@@ -1,6 +1,7 @@
 import React, { useState } from'react';
 import Tabs from'@mui/material/Tabs';
 import Tab from'@mui/material/Tab';
+import App from './App';
 
 function TabApp() {
     const [value, setValue] = useState('one');
@@ -11,13 +12,12 @@ function TabApp() {
 
     return (<div>
         <Tabs value={value}onChange={handleChange}>
-            <Tab value="one"label="Item One" />
-            <Tab value="two"label="Item Two" />
-            <Tab value="three"label="Item Three" />
+            <Tab value="one"label="Home " />
+            <Tab value="two"label="Todolist" />
         </Tabs>
-        {value === 'one' && <div>Item One</div>}   
-        {value === 'two' && <div>Item Two</div>}   
-        {value === 'three' && <div>Item Three</div>} 
+        {value === 'one' && <div>This is homepage</div>}   
+        {value === 'two' && <div><App /></div>}   
+
     </div>);
 }
 export default TabApp;
